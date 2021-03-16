@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.company.temp.service.impl.EmpMapper">
+	<select id="getEmpList" resultType="map" >
+		SELECT 
+		FIRST_NAME "firstName", 
+		SALARY "salary",
+		JOB_ID "job_id"
+		FROM EMPLOYEES
+	</select>
+	
+	<!-- 
+	일별 판매합계
+	* sum과 같은 계산식의 경우 alias 필요
+	 -->
+	<select id="getDailySold" resultType="map">
+	SELECT TO_CHAR(SALE_DATE, 'yyyy-mm-dd') AS 날짜, SUM(SALE_PRICE) AS 합계
+	FROM SALE_TBL_10
+	GROUP BY
+	SALE_DATE
+	</select>
+</mapper>
