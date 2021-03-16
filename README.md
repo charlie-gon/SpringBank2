@@ -2,6 +2,9 @@
 - 오픈뱅킹API 실습
 - ajax 활용한 API 데이터 출력
 - API 부재 시 해당 사이트 크로울링 통한 데이터 출력(사이트 통쨰로 가져온 후 원하는 태그에 접근/출력)
+- 파일 업로드 및 다운로드 구현
+- 자바 리플렉션
+- JSON으로 값 전달 및 출력 구현
 
 참고
 - 오픈뱅킹 API 문서 https://developers.kftc.or.kr/dev/doc/open-banking
